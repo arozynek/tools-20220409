@@ -4,7 +4,8 @@
   "scripts": {
     "start": "echo \"NPM Script not implemented\" && exit 1",
     "develop": "webpack serve --mode development",
-    "production": "webpack --mode production"
+    "production": "webpack --mode production",
+    "format": "prettier --write src/*"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",

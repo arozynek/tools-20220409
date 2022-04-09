@@ -1,8 +1,7 @@
-@import './mixins.scss';
-$main-color: #187c8e; 
+@import "./mixins.scss";
+$main-color: #187c8e;
 $back-color: rgb(159, 204, 218);
-$border-color: 1.1em solid rgba(104,159,56, 0.2);
-
+$border-color: 1.1em solid rgba(104, 159, 56, 0.2);
 
 html,
 body,
@@ -21,7 +20,6 @@ h1 {
   }
 }
 
-
 .blog {
   display: flex;
   .list {
@@ -36,14 +34,16 @@ h1 {
       flex-basis: 33vw;
       @include ellipsis;
       &:nth-of-type(2n) {
-        background-color: $back-color;}
+        background-color: $back-color;
+      }
       &:hover {
-          background-color: $main-color;
-          color: #f5f5f5;
-          cursor: pointer;
-        }
-      }}
-    .post {
+        background-color: $main-color;
+        color: #f5f5f5;
+        cursor: pointer;
+      }
+    }
+  }
+  .post {
     padding: 2rem;
     font-size: 1.6180339rem;
     flex-shrink: 1;
@@ -62,13 +62,9 @@ h1 {
   }
 }
 
-
-
 .loader {
   @include loader;
-  }
-
-
+}
 
 @keyframes loading {
   0% {
@@ -78,4 +74,3 @@ h1 {
     transform: rotate(360deg);
   }
 }
-
