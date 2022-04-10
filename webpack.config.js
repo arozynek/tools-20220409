@@ -6,7 +6,7 @@ const { LoaderOptionsPlugin } = require("webpack");
 
 
 module.exports = {
-  entry: ["./src/main.js", "./src/style.scss"],
+  entry: ["./src/main.ts", "./src/style.scss"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
@@ -24,6 +24,10 @@ module.exports = {
         test: /.scss$/,
         use: [MiniCSSExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test:/ts$/,
+        use:['ts-loader'],
+      }
     ],
   },
 };
