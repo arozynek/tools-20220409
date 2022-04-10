@@ -1,6 +1,7 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 const { LoaderOptionsPlugin } = require("webpack");
 
 
@@ -15,6 +16,7 @@ module.exports = {
       template: "./src/index.html",
     }),
     new MiniCSSExtractPlugin(),
+    new ESLintWebpackPlugin(),
   ],
   module: {
     rules: [
